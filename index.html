@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clock: Time zone</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="header">Global Time Display App</div>
+    
+    <div class="container-convert">
+        <!--First clock as per indian time display-->
+        <div class="head">Indian Time Zone (IST)</div>
+        <div class="container1">
+            <div class="clock-block">
+                <div class="date-display1">
+                    <!--display date day and time in digital format-->
+                </div>
+                <div class="clock-pattern">
+                    <!--display time in clock format-->
+                    <div class="numbers">
+                        <div class="twelve">12</div>
+                        <div class="three">3</div>
+                        <div class="six">6</div>
+                        <div class="nine">9</div>
+                    </div>
+                    <div class="arrows">
+                        <div class="hour1"></div>
+                        <div class="min1"></div>
+                        <div class="sec1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="selector">
+             <select id="zone">
+             <option data-time-zone-id="1"  data-adjustment="GMT-12:00" data-use-daylight="0" value="-12" >(GMT-12:00) International Date Line West</option>
+             <option data-time-zone-id="2"  data-adjustment="GMT-11:00" data-use-daylight="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
+             <option data-time-zone-id="3"  data-adjustment="GMT-10:00" data-use-daylight="0" value="-10">(GMT-10:00) Hawaii</option>
+             <option data-time-zone-id="4"  data-adjustment="GMT-09:00" data-use-daylight="1" value="-9">(GMT-09:00) Alaska</option>
+             <option data-time-zone-id="5"  data-adjustment="GMT-08:00" data-use-daylight="1" value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
+             <option data-time-zone-id="6"  data-adjustment="GMT-08:00" data-use-daylight="1" value="-8">(GMT-08:00) Tijuana, Baja California</option>
+             <option data-time-zone-id="7"  data-adjustment="GMT-07:00" data-use-daylight="0" value="-7">(GMT-07:00) Arizona</option>
+             <option data-time-zone-id="8"  data-adjustment="GMT-07:00" data-use-daylight="1" value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+             <option data-time-zone-id="9"  data-adjustment="GMT-07:00" data-use-daylight="1" value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
+             <option data-time-zone-id="10" data-adjustment="GMT-06:00" data-use-daylight="0" value="-6">(GMT-06:00) Central America</option>
+             <option data-time-zone-id="11" data-adjustment="GMT-06:00" data-use-daylight="1" value="-6">(GMT-06:00) Central Time (US & Canada)</option>
+             <option data-time-zone-id="12" data-adjustment="GMT-06:00" data-use-daylight="1" value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+             <option data-time-zone-id="13" data-adjustment="GMT-06:00" data-use-daylight="0" value="-6">(GMT-06:00) Saskatchewan</option>
+             <option data-time-zone-id="14" data-adjustment="GMT-05:00" data-use-daylight="0" value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
+             <option data-time-zone-id="15" data-adjustment="GMT-05:00" data-use-daylight="1" value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
+             <option data-time-zone-id="16" data-adjustment="GMT-05:00" data-use-daylight="1" value="-5">(GMT-05:00) Indiana (East)</option>
+             <option data-time-zone-id="17" data-adjustment="GMT-04:00" data-use-daylight="1" value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
+             <option data-time-zone-id="18" data-adjustment="GMT-04:00" data-use-daylight="0" value="-4">(GMT-04:00) Caracas, La Paz</option>
+             <option data-time-zone-id="19" data-adjustment="GMT-04:00" data-use-daylight="0" value="-4">(GMT-04:00) Manaus</option>
+             <option data-time-zone-id="20" data-adjustment="GMT-04:00" data-use-daylight="1" value="-4">(GMT-04:00) Santiago</option>
+             <option data-time-zone-id="21" data-adjustment="GMT-03:30" data-use-daylight="1" value="-3.5">(GMT-03:30) Newfoundland</option>
+             <option data-time-zone-id="22" data-adjustment="GMT-03:00" data-use-daylight="1" value="-3">(GMT-03:00) Brasilia</option>
+             <option data-time-zone-id="23" data-adjustment="GMT-03:00" data-use-daylight="0" value="-3">(GMT-03:00) Buenos Aires, Georgetown</option>
+             <option data-time-zone-id="24" data-adjustment="GMT-03:00" data-use-daylight="1" value="-3">(GMT-03:00) Greenland</option>
+             <option data-time-zone-id="25" data-adjustment="GMT-03:00" data-use-daylight="1" value="-3">(GMT-03:00) Montevideo</option>
+             <option data-time-zone-id="26" data-adjustment="GMT-02:00" data-use-daylight="1" value="-2">(GMT-02:00) Mid-Atlantic</option>
+             <option data-time-zone-id="27" data-adjustment="GMT-01:00" data-use-daylight="0" value="-1">(GMT-01:00) Cape Verde Is.</option>
+             <option data-time-zone-id="28" data-adjustment="GMT-01:00" data-use-daylight="1" value="-1">(GMT-01:00) Azores</option>
+             <option data-time-zone-id="29" data-adjustment="GMT+00:00" data-use-daylight="0" value="0" selected>(GMT+00:00) Casablanca, Monrovia, Reykjavik</option>
+             <option data-time-zone-id="30" data-adjustment="GMT+00:00" data-use-daylight="1" value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
+             <option data-time-zone-id="31" data-adjustment="GMT+01:00" data-use-daylight="1" value="1">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+             <option data-time-zone-id="32" data-adjustment="GMT+01:00" data-use-daylight="1" value="1">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+             <option data-time-zone-id="33" data-adjustment="GMT+01:00" data-use-daylight="1" value="1">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+             <option data-time-zone-id="34" data-adjustment="GMT+01:00" data-use-daylight="1" value="1">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+             <option data-time-zone-id="35" data-adjustment="GMT+01:00" data-use-daylight="1" value="1">(GMT+01:00) West Central Africa</option>
+             <option data-time-zone-id="36" data-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Amman</option>
+             <option data-time-zone-id="37" data-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Athens, Bucharest, Istanbul</option>
+             <option data-time-zone-id="38" data-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Beirut</option>
+             <option data-time-zone-id="39" data-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Cairo</option>
+             <option data-time-zone-id="40" data-adjustment="GMT+02:00" data-use-daylight="0" value="2">(GMT+02:00) Harare, Pretoria</option>
+             <option data-time-zone-id="41" data-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+             <option data-time-zone-id="42" data-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Jerusalem</option>
+             <option data-time-zone-id="43" data-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Minsk</option>
+             <option data-time-zone-id="44" data-adjustment="GMT+02:00" data-use-daylight="1" value="2">(GMT+02:00) Windhoek</option>
+             <option data-time-zone-id="45" data-adjustment="GMT+03:00" data-use-daylight="0" value="3">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
+             <option data-time-zone-id="46" data-adjustment="GMT+03:00" data-use-daylight="1" value="3">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+             <option data-time-zone-id="47" data-adjustment="GMT+03:00" data-use-daylight="0" value="3">(GMT+03:00) Nairobi</option>
+             <option data-time-zone-id="48" data-adjustment="GMT+03:00" data-use-daylight="0" value="3">(GMT+03:00) Tbilisi</option>
+             <option data-time-zone-id="49" data-adjustment="GMT+03:30" data-use-daylight="1" value="3.5">(GMT+03:30) Tehran</option>
+             <option data-time-zone-id="50" data-adjustment="GMT+04:00" data-use-daylight="0" value="4">(GMT+04:00) Abu Dhabi, Muscat</option>
+             <option data-time-zone-id="51" data-adjustment="GMT+04:00" data-use-daylight="1" value="4">(GMT+04:00) Baku</option>
+             <option data-time-zone-id="52" data-adjustment="GMT+04:00" data-use-daylight="1" value="4">(GMT+04:00) Yerevan</option>
+             <option data-time-zone-id="53" data-adjustment="GMT+04:30" data-use-daylight="0" value="4.5">(GMT+04:30) Kabul</option>
+             <option data-time-zone-id="54" data-adjustment="GMT+05:00" data-use-daylight="1" value="5">(GMT+05:00) Yekaterinburg</option>
+             <option data-time-zone-id="55" data-adjustment="GMT+05:00" data-use-daylight="0" value="5">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
+             <option data-time-zone-id="56" data-adjustment="GMT+05:30" data-use-daylight="0" value="5.5">(GMT+05:30) Sri Jayawardenapura</option>
+             <option data-time-zone-id="57" data-adjustment="GMT+05:30" data-use-daylight="0" value="5.5">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+             <option data-time-zone-id="58" data-adjustment="GMT+05:45" data-use-daylight="0" value="5.75">(GMT+05:45) Kathmandu</option>
+             <option data-time-zone-id="59" data-adjustment="GMT+06:00" data-use-daylight="1" value="6">(GMT+06:00) Almaty, Novosibirsk</option>
+             <option data-time-zone-id="60" data-adjustment="GMT+06:00" data-use-daylight="0" value="6">(GMT+06:00) Astana, Dhaka</option>
+             <option data-time-zone-id="61" data-adjustment="GMT+06:30" data-use-daylight="0" value="6.5">(GMT+06:30) Yangon (Rangoon)</option>
+             <option data-time-zone-id="62" data-adjustment="GMT+07:00" data-use-daylight="0" value="7">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+             <option data-time-zone-id="63" data-adjustment="GMT+07:00" data-use-daylight="1" value="7">(GMT+07:00) Krasnoyarsk</option>
+             <option data-time-zone-id="64" data-adjustment="GMT+08:00" data-use-daylight="0" value="8">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
+             <option data-time-zone-id="65" data-adjustment="GMT+08:00" data-use-daylight="0" value="8">(GMT+08:00) Kuala Lumpur, Singapore</option>
+             <option data-time-zone-id="66" data-adjustment="GMT+08:00" data-use-daylight="0" value="8">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
+             <option data-time-zone-id="67" data-adjustment="GMT+08:00" data-use-daylight="0" value="8">(GMT+08:00) Perth</option>
+             <option data-time-zone-id="68" data-adjustment="GMT+08:00" data-use-daylight="0" value="8">(GMT+08:00) Taipei</option>
+             <option data-time-zone-id="69" data-adjustment="GMT+09:00" data-use-daylight="0" value="9">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
+             <option data-time-zone-id="70" data-adjustment="GMT+09:00" data-use-daylight="0" value="9">(GMT+09:00) Seoul</option>
+             <option data-time-zone-id="71" data-adjustment="GMT+09:00" data-use-daylight="1" value="9">(GMT+09:00) Yakutsk</option>
+             <option data-time-zone-id="72" data-adjustment="GMT+09:30" data-use-daylight="0" value="9.5">(GMT+09:30) Adelaide</option>
+             <option data-time-zone-id="73" data-adjustment="GMT+09:30" data-use-daylight="0" value="9.5">(GMT+09:30) Darwin</option>
+             <option data-time-zone-id="74" data-adjustment="GMT+10:00" data-use-daylight="0" value="10">(GMT+10:00) Brisbane</option>
+             <option data-time-zone-id="75" data-adjustment="GMT+10:00" data-use-daylight="1" value="10">(GMT+10:00) Canberra, Melbourne, Sydney</option>
+             <option data-time-zone-id="76" data-adjustment="GMT+10:00" data-use-daylight="1" value="10">(GMT+10:00) Hobart</option>
+             <option data-time-zone-id="77" data-adjustment="GMT+10:00" data-use-daylight="0" value="10">(GMT+10:00) Guam, Port Moresby</option>
+             <option data-time-zone-id="78" data-adjustment="GMT+10:00" data-use-daylight="1" value="10">(GMT+10:00) Vladivostok</option>
+             <option data-time-zone-id="79" data-adjustment="GMT+11:00" data-use-daylight="1" value="11">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
+             <option data-time-zone-id="80" data-adjustment="GMT+12:00" data-use-daylight="1" value="12">(GMT+12:00) Auckland, Wellington</option>
+             <option data-time-zone-id="81" data-adjustment="GMT+12:00" data-use-daylight="0" value="12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
+             <option data-time-zone-id="82" data-adjustment="GMT+13:00" data-use-daylight="0" value="13">(GMT+13:00) Nuku'alofa</option>
+            </select>
+
+            <!--Second clock time display as per selection above-->
+            <div class="container">
+                <div class="clock-block">
+                    <div class="date-display">
+                        <!--display date day and time in digital format-->
+                    </div>
+                    <div class="clock-pattern">
+                        <!--display time in clock format-->
+                        <div class="numbers">
+                            <div class="twelve">12</div>
+                            <div class="three">3</div>
+                            <div class="six">6</div>
+                            <div class="nine">9</div>
+                        </div>
+                        <div class="arrows">
+                            <div class="hour"></div>
+                            <div class="min"></div>
+                            <div class="sec"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+     
+    <script src="script.js"></script>
+</body>
+</html>

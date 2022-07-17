@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    justify-content: baseline;
+}
+body{
+    display: inline;
+    font-family: 'Roboto Slab', serif;
+    background-color: black;
+    color: white;
+}
+#header{
+    position:static;
+    background-color: rgb(41, 37, 37);
+    padding: 1rem;
+}
+.head{
+    position: absolute;
+    margin: 4rem 0 0 2rem;
+    border: 1px solid rgb(249, 249, 249);
+    border-radius: 3px;
+}
+
+.container-convert{
+    margin: 1rem;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2,12rem);
+    column-gap: 25rem;    
+}
+
+.container, .container1{
+    height: 12rem;
+    width: 24rem;
+    margin: 2rem;
+    padding:0.5rem;
+    display: grid;
+    background-color: rgb(0, 0, 0);
+    -webkit-box-shadow: 1px 5px 13px 8px #FFFFFF; 
+    box-shadow: 1px 5px 13px 8px #FFFFFF;
+    
+}
+
+.container1{
+    margin-top: 10.3rem;
+   }
+
+.clock-block{
+    position: relative;
+}
+
+.date-display, .date-display1{
+    position: absolute;
+    padding: 0.5rem 0 0 1rem;
+    width: 50%;
+}
+
+.clock-pattern{
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    margin: 0.7rem 1rem 0 12rem;
+    box-shadow: 2px 2px 7px 4px  rgba(245, 245, 245, 0.826);
+    background: rgb(0,0,0);
+    background: -moz-radial-gradient(center, rgb(0,0,0) 0%, rgb(46,53,53) 49%, rgb(0,0,0) 100%);
+    background: -webkit-radial-gradient(center, rgb(0,0,0) 0%, rgb(46,53,53) 49%, rgb(0,0,0) 100%);
+    background: radial-gradient(ellipse at center, rgb(0,0,0) 0%, rgb(46,53,53) 49%, rgb(0,0,0) 100%);
+}
+.numbers{
+    color: rgb(236, 236, 250);
+    font-size: 1rem;
+    text-shadow: 1px 2px rgb(95, 94, 94);
+}
+.twelve{
+    padding-left:10rem;
+    transform: translateX(-50%);
+}
+.three{
+    padding: 2.9rem 0 0 9rem ;
+}
+.six{
+    padding: 2.9rem 0 0 4.7rem ;
+}
+.nine{
+    padding-left: 0.5rem;
+    transform: translateY(-5.5rem);
+}
+.arrows{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrows::before{
+    content:"";
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: darkgray;
+    border-radius: 50%;
+    z-index: 10;
+}
+.arrows div{
+    width: 0.2rem;
+    height: 3.4rem;
+    position: absolute;
+    border-radius: 100% 100% 0 0;
+    bottom: 50%;
+    transform-origin: bottom center;
+}
+
+.arrows .sec,.arrows .sec1{
+    transform: rotate(290deg);
+    background-color: rgb(76, 150, 150);
+    height: 2.8rem;
+}
+.arrows .min, .min1{
+    background-color: rgb(121, 121, 125);
+}
+.arrows .hour,.arrows .hour1{
+    background-color: rgba(229, 227, 240, 0.808);
+    height: 2.5rem;
+    transform: rotate(90deg);
+}
+
+
+#zone{
+    margin:2rem;
+    background-color: black;
+    color: white;
+}
+
+#zone, .head{
+    padding: 0.5rem;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    width: 25rem;
+}
+#selector{
+    margin: 2rem;   
+}
